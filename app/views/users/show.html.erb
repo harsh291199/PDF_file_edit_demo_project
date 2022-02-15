@@ -1,0 +1,8 @@
+<h1> Show page </h1>
+
+<p> First Name : <%= @user.fname %></p>
+<p> Business Name : <%= @user.b_name %></p>
+
+<% if @user.file.attached? %>
+  <%= link_to "Download", rails_blob_path(@user.file, disposition: "attachment"), style: "color: #ec407a" %>
+<% end %>

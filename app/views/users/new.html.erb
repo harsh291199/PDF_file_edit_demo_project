@@ -1,0 +1,24 @@
+<h1> New user </h1>
+
+<div>
+    <%= form_with(model: @user, class: "shadow p-3 mb-3 bg-info rounded", local: true) do |f| %>
+    <div class="row mb-3">
+        <%= f.label :First_Name, class: "col-sm-2 col-form-label text-light" %>
+        <div class="col-sm-10">
+        <%= f.text_field :fname, class: "form-control shadow rounded" %>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <%= f.label :Business_Name, class: "col-sm-2 col-form-label text-light" %>
+        <div class="col-sm-10">
+        <%= f.text_field :b_name, class: "form-control shadow rounded" %>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <%= f.submit class: "btn btn-outline-light btn-sm" %>
+    </div>
+
+    <% end %>
+</div>
